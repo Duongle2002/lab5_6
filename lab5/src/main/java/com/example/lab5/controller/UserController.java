@@ -11,7 +11,7 @@ import com.example.lab5.service.UserService;
 import java.util.List;
 
 @Controller
-public class UserController {
+public class   UserController {
 
    @Autowired
    private UserService userService;
