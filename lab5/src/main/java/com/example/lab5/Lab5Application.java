@@ -8,6 +8,7 @@ public class Lab5Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Lab5Application.class, args);
+		System.out.println("Sever run: http://localhost:8080/ ");
 	}
 
 }
