@@ -29,6 +29,7 @@ public class   UserController {
 
    // Return a specific user by ID
    @GetMapping("/users/{id}")
+   @ResponseBody
    public ResponseEntity<User> getUserById(@PathVariable("id") Long userId) {
        User user = userService.findById(userId);
        if (user != null) {
@@ -47,6 +48,7 @@ public class   UserController {
 
    // Create a new user
    @PostMapping("/user")
+   @ResponseBody
    public ResponseEntity<User> createUser(@RequestBody User user) {
        userService.save(user);
        return ResponseEntity.status(201).body(user);  // Return 201 Created with new user data
@@ -54,6 +56,7 @@ public class   UserController {
 
    // Update an existing user by ID
    @PutMapping("/user/{id}")
+   @ResponseBody
    public ResponseEntity<User> updateUser(@PathVariable("id") Long userId, @RequestBody User updateUser) {
        User user = userService.findById(userId);
        if (user != null) {
